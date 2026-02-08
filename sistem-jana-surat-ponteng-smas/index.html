@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Jana Surat Ponteng SMAS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* STRICT HIGH CONTRAST LABELS - 16px BOLD BLACK */
+        label {
+            color: #000000 !important;
+            font-weight: 900 !important;
+            font-size: 16px !important;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        /* INPUT FIELD BORDERS & BACKGROUND */
+        input, select, textarea {
+            background-color: #FFFFE0 !important; /* Light Yellow for contrast */
+            border: 4px solid #000000 !important; /* Thick black border */
+            color: #000000 !important;
+            font-weight: 900 !important;
+            padding: 1rem !important;
+            font-size: 1.125rem !important;
+        }
+
+        input:focus, select:focus {
+            background-color: #ffffff !important;
+            border-color: #FF0000 !important; /* Bright Red on focus */
+            outline: 6px solid #fbbf24 !important;
+            box-shadow: none !important;
+        }
+
+        /* CUSTOM DROPDOWN ARROW - PROMINENT RED */
+        select {
+            appearance: none !important;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF0000' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 1.5rem center !important;
+            background-size: 2.5rem !important;
+            padding-right: 4.5rem !important;
+            cursor: pointer;
+        }
+
+        /* HIGH VISIBILITY CALENDAR PICKER ICON */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background-color: #FF0000; /* Red Background */
+            border-radius: 12px;
+            padding: 8px;
+            filter: invert(1); /* White icon on red */
+            border: 3px solid black;
+            opacity: 1 !important;
+        }
+
+        /* 3D BUTTON EFFECT */
+        .btn-3d {
+            box-shadow: 8px 8px 0px 0px #000000;
+            transition: all 0.1s ease;
+            border: 4px solid #000000 !important;
+        }
+        .btn-3d:active {
+            box-shadow: 0px 0px 0px 0px #000000;
+            transform: translate(6px, 6px);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .group:hover .group-hover\:bounce {
+            animation: bounce 0.5s infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "jspdf": "https://esm.sh/jspdf@^4.1.0",
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@^5.0.7"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
